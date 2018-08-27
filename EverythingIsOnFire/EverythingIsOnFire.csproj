@@ -305,6 +305,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Fire.cs" />
     <Compile Include="Assets\Scripts\FirePointController.cs" />
+    <Compile Include="Assets\Scripts\ThrowingDirectionController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

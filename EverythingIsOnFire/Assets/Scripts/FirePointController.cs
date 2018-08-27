@@ -7,12 +7,12 @@ public class FirePointController : MonoBehaviour {
     public GameObject FirePrefab;
 
     [SerializeField]
-    private bool FirePresent;
+    private bool _firePresent;
 
     // Use this for initialization
     void Start () {
         GetComponent<BoxCollider2D>().enabled = true;
-        FirePresent = false;
+        _firePresent = false;
         StartCoroutine(WaitForFire());
     }
 	
@@ -22,7 +22,7 @@ public class FirePointController : MonoBehaviour {
 
     IEnumerator WaitForFire()
     {
-        if(FirePresent)
+        if(_firePresent)
         {
             AddFire();
         }
@@ -37,6 +37,7 @@ public class FirePointController : MonoBehaviour {
         {
             AttachedFire = Instantiate(FirePrefab);
             AttachedFire.transform.position = transform.position;
+            AttachedFire.transform.parent = transform;
         }
     }
 
@@ -45,7 +46,7 @@ public class FirePointController : MonoBehaviour {
         Fire other = collision.gameObject.GetComponent<Fire>();
         if(other != null)
         {
-            FirePresent = true;
+            _firePresent = true;
         }
     }
 }
