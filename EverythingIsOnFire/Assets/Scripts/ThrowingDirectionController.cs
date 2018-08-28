@@ -3,7 +3,8 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowingDirectionController : MonoBehaviour {
+public class ThrowingDirectionController : MonoBehaviour
+{
     [SerializeField]
     private List<GameObject> _objectsToThrow;
     private LineRenderer _lineRenderer;
