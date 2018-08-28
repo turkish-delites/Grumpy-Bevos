@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-
     [SerializeField]
     private List<FirePointController> _firePoints;
     [SerializeField]

@@ -6,14 +6,10 @@ public class FirePointController : MonoBehaviour
 {
     public GameObject AttachedFire;
     public GameObject FirePrefab;
-
-    [SerializeField]
-    private bool _firePresent;
     
     // Use this for initialization
     void Start () {
         GetComponent<BoxCollider2D>().enabled = true;
-        _firePresent = false;
     }
 	
 	// Update is called once per frame
@@ -28,8 +24,10 @@ public class FirePointController : MonoBehaviour
     {
         if(AttachedFire == null)
         {
+            //Debug.Log("adding fire");
             fireSource.ResetFireTimer();
             AttachedFire = Instantiate(FirePrefab);
+            AttachedFire.GetComponent<Fire>().AttachedFirePoint = this;
             AttachedFire.transform.position = transform.position;
         }
     }
@@ -37,8 +35,10 @@ public class FirePointController : MonoBehaviour
     public void OnTriggerStay2D(Collider2D collision)
     {
         Fire other = collision.gameObject.GetComponent<Fire>();
-        if(other != null && other.ReadyToSpread)
+        //Debug.Log("out : " + collision.name + " " + other + " " + name);
+        if (other != null && other.ReadyToSpread)
         {
+            //Debug.Log("inside : " + collision.name + " " + other + " " + name);
             AddFire(other);
         }
     }

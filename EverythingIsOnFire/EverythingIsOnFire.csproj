@@ -305,9 +305,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BlockController.cs" />
     <Compile Include="Assets\Scripts\Fire.cs" />
+    <Compile Include="Assets\Scripts\FireAlarm.cs" />
     <Compile Include="Assets\Scripts\FirePointController.cs" />
     <Compile Include="Assets\Scripts\PiercingShot.cs" />
+    <Compile Include="Assets\Scripts\SprinklerController.cs" />
     <Compile Include="Assets\Scripts\ThrowingDirectionController.cs" />
+    <Compile Include="Assets\Scripts\WaterController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

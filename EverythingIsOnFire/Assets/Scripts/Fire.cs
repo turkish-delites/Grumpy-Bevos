@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-
-    public bool ReadyToSpread { get; set; }
+    public FirePointController AttachedFirePoint;
+    public bool ReadyToSpread;
     [SerializeField]
-    private float _secondsToSpread = .25f;
+    private float _secondsToSpread;
 
     private void Awake()
     {
@@ -18,14 +18,17 @@ public class Fire : MonoBehaviour
     {
         StartCoroutine(TimerToSpread());
 	}
+
     public void ResetFireTimer()
     {
         StartCoroutine(TimerToSpread());
     }
+
     private IEnumerator TimerToSpread()
     {
         ReadyToSpread = false;
         yield return new WaitForSeconds(_secondsToSpread);
         ReadyToSpread = true;
+        Debug.Log("resetting fire");
     }
 }
