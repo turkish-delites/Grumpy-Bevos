@@ -303,8 +303,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BlockController.cs" />
     <Compile Include="Assets\Scripts\Fire.cs" />
     <Compile Include="Assets\Scripts\FirePointController.cs" />
+    <Compile Include="Assets\Scripts\PiercingShot.cs" />
     <Compile Include="Assets\Scripts\ThrowingDirectionController.cs" />
   </ItemGroup>
   <ItemGroup>
