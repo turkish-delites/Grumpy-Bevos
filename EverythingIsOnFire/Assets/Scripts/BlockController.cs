@@ -12,13 +12,14 @@ public class BlockController : MonoBehaviour
     private float _piercingShotSpeedToBreak = 0f;
 	// Update is called once per frame
 	void Update () {
-        CheckIfCompletelyOnFire();
+        StartCoroutine(CheckIfCompletelyOnFire());
 	}
 
-    private void CheckIfCompletelyOnFire()
+    private IEnumerator CheckIfCompletelyOnFire()
     {
         if(_firePoints.TrueForAll(x => x.AttachedFire != null))
         {
+            yield return new WaitForSeconds(1f);
             Destroy(_mainBlockObject);
         }
     }

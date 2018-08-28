@@ -28,7 +28,7 @@ public class FireAlarm : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision)
     {
         Fire other = collision.gameObject.GetComponent<Fire>();
-        if (other != null && other.ReadyToSpread)
+        if (other != null)
         {
             Activate(other);
         }
