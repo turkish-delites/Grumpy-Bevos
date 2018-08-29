@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirePointController : MonoBehaviour
+public class FirePointController : MonoBehaviour, IFireGroupController
 {
     public GameObject AttachedFire;
     public GameObject FirePrefab;
-    
+    public GameObject FirePointGroupController;
+    public bool ReadyToBeSetOnFire;
+
+    [SerializeField]
+    private float _secondsToWaitToReigniteOnceFirePutOut = 1;
+    [SerializeField]
+    private float _secondsForFireToWaitBeforeSpreading = 1;
+
     // Use this for initialization
     void Start () {
+        ReadyToBeSetOnFire = true;
         GetComponent<BoxCollider2D>().enabled = true;
     }
 	
@@ -22,13 +30,14 @@ public class FirePointController : MonoBehaviour
 
     public void AddFire(Fire fireSource)
     {
-        if(AttachedFire == null)
+        if(AttachedFire == null && ReadyToBeSetOnFire)
         {
             //Debug.Log("adding fire");
             fireSource.ResetFireTimer();
             AttachedFire = Instantiate(FirePrefab);
             AttachedFire.GetComponent<Fire>().AttachedFirePoint = this;
             AttachedFire.transform.position = transform.position;
+            AttachedFire.GetComponent<Fire>().SecondsToSpread = _secondsForFireToWaitBeforeSpreading;
         }
     }
     
@@ -49,5 +58,31 @@ public class FirePointController : MonoBehaviour
         {
             Destroy(AttachedFire);
         }
+    }
+
+    public bool RemoveAllFires()
+    {
+        return FirePointGroupController.GetComponent<IFireGroupController>().RemoveAllFires();
+    }
+
+    public bool RemoveFire()
+    {
+        if (AttachedFire != null)
+        {
+            Destroy(AttachedFire);
+            AttachedFire = null;
+            return true;
+        }
+
+        StartCoroutine(RemovedFireCoolDown());
+
+        return false;
+    }
+
+    private IEnumerator RemovedFireCoolDown()
+    {
+        ReadyToBeSetOnFire = false;
+        yield return new WaitForSeconds(_secondsToWaitToReigniteOnceFirePutOut);
+        ReadyToBeSetOnFire = true;
     }
 }
