@@ -24,6 +24,7 @@ public class SprinklerController : MonoBehaviour {
     private IEnumerator Sprinkle()
     {
         var waterDirection = Random.insideUnitCircle;
+        waterDirection.y = Mathf.Abs(waterDirection.y);
         var waterObject = Instantiate(_waterPrefab);
         waterObject.transform.position = transform.position;
         waterObject.GetComponent<Rigidbody2D>().AddForce(waterDirection * _waterForce);
