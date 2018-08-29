@@ -9,6 +9,9 @@ public class SprinklerController : MonoBehaviour {
     private float _waterForce = 10;
     [SerializeField]
     private bool _activated = false;
+    [SerializeField]
+    private float _secondsBetweenDrops = .3f;
+
 	public void Activate()
     {
         if (!_activated)
@@ -24,7 +27,7 @@ public class SprinklerController : MonoBehaviour {
         var waterObject = Instantiate(_waterPrefab);
         waterObject.transform.position = transform.position;
         waterObject.GetComponent<Rigidbody2D>().AddForce(waterDirection * _waterForce);
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(_secondsBetweenDrops);
         yield return Sprinkle();
     }
 }
