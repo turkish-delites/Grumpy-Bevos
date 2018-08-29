@@ -6,8 +6,7 @@ public class Fire : MonoBehaviour
 {
     public FirePointController AttachedFirePoint;
     public bool ReadyToSpread;
-    [SerializeField]
-    private float _secondsToSpread;
+    public float SecondsToSpread;
 
     private void Awake()
     {
@@ -27,7 +26,7 @@ public class Fire : MonoBehaviour
     private IEnumerator TimerToSpread()
     {
         ReadyToSpread = false;
-        yield return new WaitForSeconds(_secondsToSpread);
+        yield return new WaitForSeconds(SecondsToSpread);
         ReadyToSpread = true;
         Debug.Log("resetting fire");
     }

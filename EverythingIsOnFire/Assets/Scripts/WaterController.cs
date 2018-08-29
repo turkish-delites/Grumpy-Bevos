@@ -14,16 +14,14 @@ public class WaterController : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        Fire fire = other.GetComponent<Fire>();
-        if (fire != null)
+        var fireGroup = other.GetComponent<IFireGroupController>();
+        if (fireGroup != null)
         {
-            if(fire.AttachedFirePoint != null)
+            bool hasRemovedAFire = fireGroup.RemoveAllFires();
+            if(hasRemovedAFire)
             {
-                fire.AttachedFirePoint.AttachedFire = null;
+                Destroy(gameObject);
             }
-
-            Destroy(fire.gameObject);
-            Destroy(gameObject);
         }
     }
 }
