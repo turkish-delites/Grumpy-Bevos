@@ -10,8 +10,10 @@ public class BlockController : MonoBehaviour
     private GameObject _mainBlockObject;
     [SerializeField]
     private float _piercingShotSpeedToBreak = 0f;
-	// Update is called once per frame
-	void Update () {
+    [SerializeField]
+    private float _secondsFromFullBurnToBreak = 1f;
+    // Update is called once per frame
+    void Update () {
         StartCoroutine(CheckIfCompletelyOnFire());
 	}
 
@@ -19,7 +21,7 @@ public class BlockController : MonoBehaviour
     {
         if(_firePoints.TrueForAll(x => x.AttachedFire != null))
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(_secondsFromFullBurnToBreak);
             Destroy(_mainBlockObject);
         }
     }

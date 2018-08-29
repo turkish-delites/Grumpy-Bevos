@@ -324,7 +324,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttachedFire: {fileID: 0}
   FirePrefab: {fileID: 1518535849118546, guid: c34ed16324b7e0b47aa0969e2d66c505, type: 2}
-  _firePresent: 0
 --- !u!114 &114407581703717110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,6 +340,8 @@ MonoBehaviour:
   - {fileID: 114235821075100454}
   - {fileID: 114718099902505184}
   _mainBlockObject: {fileID: 1092645257901684}
+  _piercingShotSpeedToBreak: 0
+  _secondsFromFullBurnToBreak: 1
 --- !u!114 &114535108168110552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,7 +355,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttachedFire: {fileID: 0}
   FirePrefab: {fileID: 1518535849118546, guid: c34ed16324b7e0b47aa0969e2d66c505, type: 2}
-  _firePresent: 0
 --- !u!114 &114718099902505184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,7 +368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttachedFire: {fileID: 0}
   FirePrefab: {fileID: 1518535849118546, guid: c34ed16324b7e0b47aa0969e2d66c505, type: 2}
-  _firePresent: 0
 --- !u!212 &212131584280578980
 SpriteRenderer:
   m_ObjectHideFlags: 1
