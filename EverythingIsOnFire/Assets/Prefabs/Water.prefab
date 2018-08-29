@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8ac4ff5b6f44d438c4d9d1fdb12934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waterSurvivalTime: 1
+  _waterSurvivalTime: 2
 --- !u!212 &212200699649125764
 SpriteRenderer:
   m_ObjectHideFlags: 1
