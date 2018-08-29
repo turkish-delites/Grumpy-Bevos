@@ -11,6 +11,7 @@ public class SprinklerController : MonoBehaviour {
     private bool _activated = false;
     [SerializeField]
     private float _secondsBetweenDrops = .3f;
+
 	public void Activate()
     {
         if (!_activated)
