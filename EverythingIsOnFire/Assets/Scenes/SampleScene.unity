@@ -498,7 +498,17 @@ Prefab:
       propertyPath: _secondsBetweenDrops
       value: 0.3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82922128074660186, guid: cea39aaa3471467468bd3bc9fb359c88,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: db8886c52346a4b16a0277989efa794f, type: 3}
+    - target: {fileID: 1989720572580896, guid: cea39aaa3471467468bd3bc9fb359c88, type: 2}
+      propertyPath: m_TagString
+      value: fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 82922128074660186, guid: cea39aaa3471467468bd3bc9fb359c88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: cea39aaa3471467468bd3bc9fb359c88, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1024406457
