@@ -6,6 +6,7 @@ TagManager:
   tags:
   - fire
   - wood
+  - Bevo
   layers:
   - Default
   - TransparentFX
