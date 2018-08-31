@@ -36,6 +36,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
                 hasRemovedAFire = hasRemovedThisFire;
             }
         }
+
         InterruptFireDestruction();
         return hasRemovedAFire;
     }
