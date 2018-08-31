@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttachedFirePoint: {fileID: 0}
   ReadyToSpread: 0
-  SecondsToSpread: 0
+  SecondsToSpread: 1
 --- !u!212 &212029263405732754
 SpriteRenderer:
   m_ObjectHideFlags: 1
