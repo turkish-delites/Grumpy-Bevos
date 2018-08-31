@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618363019412812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6565828, y: -4.0993667, z: 0.016508562}
+  m_LocalPosition: {x: -4.5354786, y: -3.2141023, z: 0.016508562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4014720816649426}
@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttachedFire: {fileID: 0}
-  FirePrefab: {fileID: 1518535849118546, guid: c34ed16324b7e0b47aa0969e2d66c505, type: 2}
-  FirePointGroupController: {fileID: 0}
+  FirePrefab: {fileID: 1857509520551312, guid: 39dd670954b2147069ca20b281e9a60e, type: 2}
+  FirePointGroupController: {fileID: 1618363019412812}
   ReadyToBeSetOnFire: 1
   _secondsToWaitToReigniteOnceFirePutOut: 1
   _secondsForFireToWaitBeforeSpreading: 1

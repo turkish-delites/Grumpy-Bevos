@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189242878042444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3499985, y: -0.22373217, z: 0.04168472}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.33389226, y: 0.99944144, z: 1}
   m_Children: []
   m_Father: {fileID: 4813184702008826}
@@ -161,8 +161,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1918338138597038}
-  m_LocalRotation: {x: -0, y: -0, z: -0.6967956, w: 0.71726984}
-  m_LocalPosition: {x: 0.71, y: -1.33, z: -0.04168472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4312067, y: -3.4712615, z: -0.04168472}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children:
   - {fileID: 4804626648199086}
@@ -172,7 +172,7 @@ Transform:
   - {fileID: 4371202169448274}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -88.341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4813968342539574
 Transform:
   m_ObjectHideFlags: 1
@@ -525,6 +525,8 @@ MonoBehaviour:
   - {fileID: 114859587791998630}
   - {fileID: 114211415863949536}
   - {fileID: 114573100329665006}
+  firePointPrefab: {fileID: 1695088020225198, guid: 89fc2131be56247d897270b98c2e6594,
+    type: 2}
   _mainBlockObject: {fileID: 1918338138597038}
   _piercingShotSpeedToBreak: 0
   _secondsFromFullBurnToBreak: 1
