@@ -374,7 +374,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 346508624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -4.75, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -562,6 +562,34 @@ Prefab:
     - {fileID: 82922128074660186, guid: cea39aaa3471467468bd3bc9fb359c88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: cea39aaa3471467468bd3bc9fb359c88, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &909013995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 909013996}
+  m_Layer: 0
+  m_Name: projectileQueue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &909013996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 909013995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.62, y: -1.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1205511858}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1024406457
 Prefab:
   m_ObjectHideFlags: 0
@@ -651,7 +679,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.79, y: -3.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 909013996}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -669,7 +698,7 @@ MonoBehaviour:
   _objectsToThrow:
   - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
   - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
-  - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
+  - {fileID: 1072572927766842, guid: d9290668862a9a14c9823350f7f64c5d, type: 2}
   - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
   - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
   - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
@@ -678,6 +707,7 @@ MonoBehaviour:
   - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
   - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
   _throwingScale: 50
+  _projectileQueueObj: {fileID: 909013995}
 --- !u!120 &1205511860
 LineRenderer:
   m_ObjectHideFlags: 0
