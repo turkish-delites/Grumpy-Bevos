@@ -40,7 +40,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
         if(_firePoints.TrueForAll(x => x.AttachedFire != null))
         {
             yield return new WaitForSeconds(_secondsFromFullBurnToBreak);
-            Destroy(_mainBlockObject);
+            //Destroy(_mainBlockObject);
         }
     }
 

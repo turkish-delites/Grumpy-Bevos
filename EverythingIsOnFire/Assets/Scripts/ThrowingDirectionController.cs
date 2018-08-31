@@ -32,7 +32,6 @@ public class ThrowingDirectionController : MonoBehaviour
             var objectToThrow = Instantiate(topObject);
             objectToThrow.transform.position = transform.position;
             objectToThrow.GetComponent<Rigidbody2D>().AddForce(direction * force);
-            CameraController.Instance.TrackObject(objectToThrow);
         }
     }
 
