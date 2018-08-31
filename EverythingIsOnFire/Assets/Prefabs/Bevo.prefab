@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114518881754088790}
   m_Layer: 0
   m_Name: Bevo
-  m_TagString: Untagged
+  m_TagString: Bevo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618363019412812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -2.51, z: 0.016508562}
+  m_LocalPosition: {x: 0.4909625, y: -3.905798, z: 0.016508562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4014720816649426}
@@ -169,12 +169,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618363019412812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e3dee2e2f452544a2e9b126dbf4dca, type: 3}
+  m_Script: {fileID: 11500000, guid: 3135113b89faeb84fab0a95e77a7e691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _firePoints:
   - {fileID: 114123736535610688}
-  _secondsToBurnToDeath: 5
+  _secondsToBurnToDeath: 4
   _forceToKill: 5
 --- !u!212 &212614978970946756
 SpriteRenderer:
