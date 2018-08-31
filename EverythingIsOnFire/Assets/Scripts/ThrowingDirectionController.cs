@@ -10,18 +10,57 @@ public class ThrowingDirectionController : MonoBehaviour
     private LineRenderer _lineRenderer;
     [SerializeField]
     private float _throwingScale = 100;
-	// Use this for initialization
+    [SerializeField]
+    private GameObject _projectileQueueObj;
+    private List<GameObject> _projectileQueue;
+
 	void Start () {
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.positionCount = 2;
         _lineRenderer.SetPosition(0, Vector3.zero);
         _lineRenderer.SetPosition(1, Vector3.zero);
+
+        SetUpProjectileQueue();
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    private void PopProjectileQueue()
+    {
+        var first = _projectileQueue[0];
+        _projectileQueue.RemoveAt(0);
+        Destroy(first);
+        for(int i = 0; i < _projectileQueue.Count; i++)
+        {
+            _projectileQueue[i].transform.position += Vector3.left;
+        }
+    }
+
+    private void SetUpProjectileQueue()
+    {
+        _projectileQueue = new List<GameObject>();
+
+        for (int i = 0; i < _objectsToThrow.Count; i++)
+        {
+            var projectileObj = Instantiate(_objectsToThrow[i]);
+            projectileObj.transform.parent = _projectileQueueObj.transform;
+            projectileObj.transform.localPosition = new Vector3(i,0,0);
+            if(projectileObj.GetComponent<Rigidbody2D>())
+            {
+                Destroy(projectileObj.GetComponent<Rigidbody2D>());
+            }
+
+            if (projectileObj.GetComponent<BoxCollider2D>())
+            {
+                Destroy(projectileObj.GetComponent<BoxCollider2D>());
+            }
+
+            _projectileQueue.Add(projectileObj);
+        }
+    }
 
     private void ThrowTopObject(Vector3 direction, float force)
     {
@@ -32,6 +71,7 @@ public class ThrowingDirectionController : MonoBehaviour
             var objectToThrow = Instantiate(topObject);
             objectToThrow.transform.position = transform.position;
             objectToThrow.GetComponent<Rigidbody2D>().AddForce(direction * force);
+            PopProjectileQueue();
         }
     }
 
