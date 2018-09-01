@@ -9,10 +9,13 @@ public class FireAlarm : MonoBehaviour {
     private List<SprinklerController> _attachedSprinklers;
     [SerializeField]
     private bool _isActivated;
-
+    AudioSource ad;
+   public AudioClip fireAlarm;
     void Start()
     {
-        _isActivated = false;    
+        _isActivated = false;
+        ad = GetComponent<AudioSource>();
+        ad.clip = fireAlarm;
     }
 
     public void Activate(Fire fireSource)
@@ -20,6 +23,7 @@ public class FireAlarm : MonoBehaviour {
         if(!_isActivated)
         {
             _isActivated = true;
+            ad.Play();
             fireSource.ResetFireTimer();
             _attachedSprinklers.ForEach(x => x.Activate());
         }
