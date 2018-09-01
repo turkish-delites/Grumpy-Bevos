@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waterPrefab: {fileID: 114255486425220280, guid: 969ada8f3f7686b4f99f18c717002b43,
     type: 2}
-  _waterForce: 50
+  _waterForce: 35
   _activated: 0
   _secondsBetweenDrops: 0.3
 --- !u!212 &212434753585120412
