@@ -117,7 +117,6 @@ public class ThrowingDirectionController : MonoBehaviour
         var mouseDelta =  _start - _end;
         var dir = mouseDelta.normalized;
         var magnitude = mouseDelta.magnitude * _throwingScale;
-        Debug.Log(magnitude);
         ThrowTopObject(dir, magnitude);
         _lineRenderer.SetPosition(0, transform.position);
         _lineRenderer.SetPosition(1, transform.position);
