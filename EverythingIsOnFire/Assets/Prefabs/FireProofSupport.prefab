@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50404977223407232}
   - component: {fileID: 82464650255053694}
   - component: {fileID: 114299985371705134}
+  - component: {fileID: 114150910731872668}
   m_Layer: 0
   m_Name: FireProofSupport
   m_TagString: Untagged
@@ -184,6 +185,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114150910731872668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1855610796300596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34698adbb4e465d469517ab46e47cba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firePoints: []
+  firePointPrefab: {fileID: 1017434565999356, guid: e48a9e5308825c54f9fe5473ade7e5b5,
+    type: 2}
+  _mainBlockObject: {fileID: 1855610796300596}
+  _forceToKill: 10
+  _secondsFromFullBurnToBreak: 1
 --- !u!114 &114299985371705134
 MonoBehaviour:
   m_ObjectHideFlags: 1

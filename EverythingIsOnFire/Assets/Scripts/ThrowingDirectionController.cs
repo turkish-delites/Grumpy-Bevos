@@ -12,7 +12,11 @@ public class ThrowingDirectionController : MonoBehaviour
     private float _throwingScale = 100;
     [SerializeField]
     private GameObject _projectileQueueObj;
+    [SerializeField]
+    private float MaxPlayerPullBack;
     private List<GameObject> _projectileQueue;
+
+    private Vector3 _mouseDelta, _prevMousePoint;
 
 	void Start () {
         _lineRenderer = GetComponent<LineRenderer>();
@@ -22,11 +26,6 @@ public class ThrowingDirectionController : MonoBehaviour
 
         SetUpProjectileQueue();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void PopProjectileQueue()
     {
@@ -48,15 +47,14 @@ public class ThrowingDirectionController : MonoBehaviour
             var projectileObj = Instantiate(_objectsToThrow[i]);
             projectileObj.transform.parent = _projectileQueueObj.transform;
             projectileObj.transform.localPosition = new Vector3(i,0,0);
-            if(projectileObj.GetComponent<Rigidbody2D>())
-            {
-                Destroy(projectileObj.GetComponent<Rigidbody2D>());
-            }
 
-            if (projectileObj.GetComponent<BoxCollider2D>())
-            {
-                Destroy(projectileObj.GetComponent<BoxCollider2D>());
-            }
+            var RBs = projectileObj.GetComponents<Rigidbody2D>().ToList();
+            RBs.AddRange(projectileObj.GetComponentsInChildren<Rigidbody2D>());
+            RBs.ForEach(x => Destroy(x));
+
+            var colliders = projectileObj.GetComponents<Collider2D>().ToList();
+            colliders.AddRange(projectileObj.GetComponentsInChildren<Collider2D>());
+            colliders.ForEach(x => Destroy(x));
 
             _projectileQueue.Add(projectileObj);
         }
@@ -80,25 +78,44 @@ public class ThrowingDirectionController : MonoBehaviour
         }
     }
 
+    private void UpdateDelta()
+    {
+        var currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        _mouseDelta += currentMousePos - _prevMousePoint;
+
+        _prevMousePoint = currentMousePos;
+        if(_mouseDelta.magnitude > MaxPlayerPullBack)
+        {
+            _mouseDelta = _mouseDelta.normalized * MaxPlayerPullBack;
+        }
+        
+    }
+
     private void OnMouseDown()
     {
         var currentPos = transform.position;
         _lineRenderer.SetPosition(0, currentPos);
         _lineRenderer.SetPosition(1, currentPos);
+        var currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        _mouseDelta = Vector3.zero;
     }
 
     private void OnMouseDrag()
     {
-        var currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        currentPos -= new Vector3(0, 0, -1);
-        _lineRenderer.SetPosition(1, currentPos);
+        UpdateDelta();
+        var currentPos = transform.position;
+
+        _lineRenderer.SetPosition(1, currentPos + _mouseDelta);
     }
 
     private void OnMouseUp()
     {
-        var start = _lineRenderer.GetPosition(0);
-        var end = _lineRenderer.GetPosition(1);
-        ThrowTopObject((end - start).normalized, (end - start).magnitude * _throwingScale);
+        UpdateDelta();
+        _mouseDelta = -_mouseDelta;
+        var dir = _mouseDelta.normalized;
+        var magnitude = _mouseDelta.magnitude * _throwingScale;
+        ThrowTopObject(dir, magnitude);
         _lineRenderer.SetPosition(0, transform.position);
         _lineRenderer.SetPosition(1, transform.position);
     }
