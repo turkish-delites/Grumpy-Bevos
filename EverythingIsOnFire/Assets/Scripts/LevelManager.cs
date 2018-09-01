@@ -29,6 +29,19 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
     }
 
+    public void PreviousScene()
+    {
+        _currentSceneIndex--;
+        //_currentSceneIndex %= _sceneNames.Count;
+        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+    }
+
+    public void MainMenu()
+    {
+        _currentSceneIndex = 0;
+        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+    }
+
     public void Quit()
     {
 #if UNITY_EDITOR
