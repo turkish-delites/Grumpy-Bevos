@@ -28,4 +28,13 @@ public class LevelManager : MonoBehaviour {
         _currentSceneIndex %= _sceneNames.Count;
         SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
     }
+
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }

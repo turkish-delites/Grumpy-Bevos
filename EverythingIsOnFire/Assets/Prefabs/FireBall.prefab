@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4961003591805812}
   - component: {fileID: 61248057253287856}
   - component: {fileID: 50498971260513430}
-  - component: {fileID: 114938190330090324}
   - component: {fileID: 114289353736802186}
   - component: {fileID: 212967937874356758}
   m_Layer: 0
@@ -40,6 +39,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4150464306947402}
   - component: {fileID: 212029263405732754}
+  - component: {fileID: 114784078508219560}
+  - component: {fileID: 61538990882089686}
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
@@ -55,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1287023398956440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 4961003591805812}
   m_RootOrder: 0
@@ -130,13 +131,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f27bc55298a284fb63993ec9a779a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttachedFire: {fileID: 1112067515731904}
---- !u!114 &114938190330090324
+  AttachedFire: {fileID: 1287023398956440}
+  DoNotExtinguish: 1
+  _secondsUntillFireExtinguished: 5
+--- !u!114 &114784078508219560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1112067515731904}
+  m_GameObject: {fileID: 1287023398956440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bffb4eba46e9d8643acfcda6e3e0b332, type: 3}
