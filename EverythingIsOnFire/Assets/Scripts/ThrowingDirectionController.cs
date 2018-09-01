@@ -12,21 +12,21 @@ public class ThrowingDirectionController : MonoBehaviour
     private float _throwingScale = 100;
     [SerializeField]
     private GameObject _projectileQueueObj;
+    [SerializeField]
+    private float MaxPlayerPullBack;
     private List<GameObject> _projectileQueue;
 
+    private Vector3 _start, _end;
+
 	void Start () {
+        _start = _end = Vector3.zero;
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.positionCount = 2;
-        _lineRenderer.SetPosition(0, Vector3.zero);
-        _lineRenderer.SetPosition(1, Vector3.zero);
+        _lineRenderer.SetPosition(0, _start);
+        _lineRenderer.SetPosition(1, _end);
 
         SetUpProjectileQueue();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void PopProjectileQueue()
     {
@@ -80,25 +80,45 @@ public class ThrowingDirectionController : MonoBehaviour
         }
     }
 
+    private void UpdateEnd()
+    {
+        var currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var prevEnd = _end;
+        _end = currentMousePos;
+        var mouseDelta = _end - _start;
+        if(mouseDelta.magnitude > MaxPlayerPullBack)
+        {
+            mouseDelta = mouseDelta.normalized * MaxPlayerPullBack;
+            _end = _start + mouseDelta;
+        }
+    }
+
     private void OnMouseDown()
     {
         var currentPos = transform.position;
         _lineRenderer.SetPosition(0, currentPos);
         _lineRenderer.SetPosition(1, currentPos);
+        var currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        _start = currentMousePos;
+        _end = currentMousePos;
     }
 
     private void OnMouseDrag()
     {
-        var currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        currentPos -= new Vector3(0, 0, -1);
-        _lineRenderer.SetPosition(1, currentPos);
+        UpdateEnd();
+        var mouseDelta = _end - _start;
+        var currentPos = transform.position;
+
+        _lineRenderer.SetPosition(1, currentPos + mouseDelta);
     }
 
     private void OnMouseUp()
     {
-        var start = _lineRenderer.GetPosition(0);
-        var end = _lineRenderer.GetPosition(1);
-        ThrowTopObject((end - start).normalized, (end - start).magnitude * _throwingScale);
+        var mouseDelta =  _start - _end;
+        var dir = mouseDelta.normalized;
+        var magnitude = mouseDelta.magnitude * _throwingScale;
+        Debug.Log(magnitude);
+        ThrowTopObject(dir, magnitude);
         _lineRenderer.SetPosition(0, transform.position);
         _lineRenderer.SetPosition(1, transform.position);
     }
