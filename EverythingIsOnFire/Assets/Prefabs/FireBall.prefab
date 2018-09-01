@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f27bc55298a284fb63993ec9a779a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttachedFire: {fileID: 1112067515731904}
+  AttachedFire: {fileID: 1287023398956440}
   DoNotExtinguish: 1
   _secondsUntillFireExtinguished: 5
 --- !u!114 &114784078508219560
