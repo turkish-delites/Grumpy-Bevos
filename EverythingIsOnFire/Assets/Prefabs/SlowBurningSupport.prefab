@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4888598992485730}
   - component: {fileID: 212876738338712170}
   - component: {fileID: 50458469998045138}
-  - component: {fileID: 61231326403801802}
   - component: {fileID: 82281058431108248}
   m_Layer: 0
   m_Name: SlowBurningSupport

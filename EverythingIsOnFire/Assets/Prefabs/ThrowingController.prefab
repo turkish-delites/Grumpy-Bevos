@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 120163240466743592}
   - component: {fileID: 114717242377433678}
   - component: {fileID: 65361841816962674}
+  - component: {fileID: 212385010427606416}
   m_Layer: 0
   m_Name: ThrowingController
   m_TagString: Untagged
@@ -51,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1833196328597956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.79, y: -3.4680002, z: 0}
+  m_LocalPosition: {x: -6.47, y: -3.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4616067380440650}
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1302329417919716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.62, y: -1.33, z: 0}
+  m_LocalPosition: {x: 0.43, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4533467963383186}
@@ -81,7 +82,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 42.320507, y: 21.246048, z: 2}
+  m_Size: {x: 100, y: 100, z: 2}
   m_Center: {x: 10.417688, y: 5.37323, z: 0.5}
 --- !u!114 &114717242377433678
 MonoBehaviour:
@@ -95,9 +96,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectsToThrow:
-  - {fileID: 1112067515731904, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
-  _throwingScale: 50
+  - {fileID: 1191274896816312, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
+  - {fileID: 1191274896816312, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
+  _throwingScale: 300
   _projectileQueueObj: {fileID: 1302329417919716}
+  MaxPlayerPullBack: 2
 --- !u!120 &120163240466743592
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -190,12 +193,12 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!212 &212053946060527514
+--- !u!212 &212385010427606416
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1241276240374556}
+  m_GameObject: {fileID: 1833196328597956}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

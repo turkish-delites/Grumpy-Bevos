@@ -83,3 +83,4 @@ MonoBehaviour:
   ReadyToBeSetOnFire: 1
   _secondsToWaitToReigniteOnceFirePutOut: 0.5
   _secondsForFireToWaitBeforeSpreading: 0.5
+  _canBeSetOnFire: 1

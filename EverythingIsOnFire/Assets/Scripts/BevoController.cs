@@ -70,7 +70,6 @@ public class BevoController : MonoBehaviour, IFireGroupController {
         
   			yield return new WaitForSeconds(_secondsToBurnToDeath);
   			if (CheckIfCompletelyOnFire()){
-              
                 die();
   			}
   		}

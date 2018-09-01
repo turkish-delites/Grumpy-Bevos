@@ -37,7 +37,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4309452740240826}
-  - component: {fileID: 61783139340057012}
   - component: {fileID: 114814540233206382}
   m_Layer: 0
   m_Name: PhysicalDamageTrigger
@@ -73,8 +72,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1785209243905452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2006855, y: -3.4509335, z: -0.04168472}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalPosition: {x: -0.5741916, y: -2.5829148, z: -0.04168472}
+  m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children:
   - {fileID: 4309452740240826}
   - {fileID: 4250344943345356}
@@ -150,7 +149,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7929611, y: 0.5549674}
+  m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
 --- !u!61 &61467665021983270
 BoxCollider2D:
@@ -176,31 +175,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
-  m_EdgeRadius: 0
---- !u!61 &61783139340057012
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1657995337084108}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.66}
   m_EdgeRadius: 0
 --- !u!82 &82390171350487562
 AudioSource:
@@ -431,7 +405,7 @@ MonoBehaviour:
   firePointPrefab: {fileID: 1695088020225198, guid: 89fc2131be56247d897270b98c2e6594,
     type: 2}
   _mainBlockObject: {fileID: 1785209243905452}
-  _piercingShotSpeedToBreak: 0
+  _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
 --- !u!212 &212620504049935366
 SpriteRenderer:
