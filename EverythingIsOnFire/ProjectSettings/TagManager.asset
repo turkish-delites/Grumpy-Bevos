@@ -6,6 +6,11 @@ TagManager:
   tags:
   - fire
   - wood
+  - Bevo
+  - water
+  - fireAlarm
+  - sprinkler
+  - metal
   layers:
   - Default
   - TransparentFX
