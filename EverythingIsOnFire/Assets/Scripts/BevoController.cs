@@ -31,10 +31,10 @@ public class BevoController : MonoBehaviour, IFireGroupController {
     }
 
  
-        void OnCollisionEnter2D (Collision2D col)
+    void OnCollisionEnter2D (Collision2D col)
     {
         var force = col.relativeVelocity * col.otherRigidbody.mass;
-
+        Debug.Log(force);
         if (force.magnitude > _forceToKill)
         {
             ad2.Play();
@@ -68,7 +68,6 @@ public class BevoController : MonoBehaviour, IFireGroupController {
 
   	private IEnumerator TryToBurn(){
   		if (CheckIfCompletelyOnFire()){
-         
         
   			yield return new WaitForSeconds(_secondsToBurnToDeath);
   			if (CheckIfCompletelyOnFire()){
@@ -78,7 +77,6 @@ public class BevoController : MonoBehaviour, IFireGroupController {
   		}
   	}
     
-
     private bool CheckIfCompletelyOnFire()
     {
         return (_firePoints.TrueForAll(x => x.AttachedFire != null));
