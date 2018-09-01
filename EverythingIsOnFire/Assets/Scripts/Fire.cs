@@ -28,6 +28,6 @@ public class Fire : MonoBehaviour
         ReadyToSpread = false;
         yield return new WaitForSeconds(SecondsToSpread);
         ReadyToSpread = true;
-        Debug.Log("resetting fire");
+        //Debug.Log("resetting fire");
     }
 }
