@@ -61,16 +61,78 @@ public class BlockController : MonoBehaviour, IFireGroupController
     }
 
     private void AddFirePoints(){
-        var size = _mainBlockObject.transform.localScale;
+        var size = _mainBlockObject.gameObject.transform.localScale;
         Debug.Log(size);
-        AddFirePoint(0, 0);
+        float x = Mathf.Floor(size.x);
+        float y = Mathf.Floor(size.y);
+        float scale_x = 1 / x;
+        float scale_y = 1 / y;
+
+        float xIncrement = 1 / (2 * x);
+        float yIncrement = 1 / (2 * y);
+
+        List<float> y_points = new List<float>();
+        List<float> x_points = new List<float>();
+
+
+        //create the x points
+        if (x % 2 == 0)
+        {
+            for(int i = 0; i < x; ++i)
+            {
+                float xPointInitial = (-x / 2 + 0.5f) * xIncrement;
+                x_points.Add(xPointInitial + i * xIncrement);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < x; ++i)
+            {
+                float xPointInitial = -((x-1)/2) * xIncrement;
+                x_points.Add(xPointInitial + i * xIncrement);
+            }
+        }
+
+        //create the y points
+        if (y % 2 == 0)
+        {
+            for (int i = 0; i < y; ++i)
+            {
+                float yPointInitial = (-y / 2 + 0.5f) * yIncrement;
+                y_points.Add(yPointInitial + i * yIncrement);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < y; ++i)
+            {
+                float yPointInitial = -((y - 1) / 2) * yIncrement;
+                y_points.Add(yPointInitial + i * yIncrement);
+            }
+        }
+
+        foreach (float point in x_points)
+        {
+            Debug.Log(point);
+        }
+
+        foreach(float xpoint in x_points)
+        {
+            foreach(float ypoint in y_points)
+            {
+                AddFirePoint(xpoint, ypoint, scale_x, scale_y);
+            }
+        }
     }
 
-    private void AddFirePoint(float x, float y){
+    private void AddFirePoint(float x, float y, float scale_x, float scale_y){
         GameObject obj = Instantiate(firePointPrefab) as GameObject;
         obj.GetComponent<FirePointController>().FirePointGroupController = this.gameObject;
         obj.transform.parent = _mainBlockObject.transform;
-        obj.transform.position = new Vector3(x, y, 0);
+        obj.transform.localPosition = new Vector3(x, y, 0);
+        obj.transform.localScale = new Vector3(scale_x, scale_y, 1);
+
+
         _firePoints.Add(obj.GetComponent<FirePointController>());
     }
 }
