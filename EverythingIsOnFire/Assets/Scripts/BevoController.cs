@@ -50,7 +50,7 @@ public class BevoController : MonoBehaviour, IFireGroupController {
 
      public bool RemoveAllFires()
     {
-        Debug.Log("removing fires");
+        //Debug.Log("removing fires");
         bool hasRemovedAFire = false;
         foreach(var firePoint in _firePoints)
         {
