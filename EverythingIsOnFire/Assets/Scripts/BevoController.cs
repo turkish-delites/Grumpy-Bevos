@@ -10,22 +10,39 @@ public class BevoController : MonoBehaviour, IFireGroupController {
     private float _secondsToBurnToDeath = 2f;
     [SerializeField]
     private float _forceToKill = 5f;
+    AudioSource ad1;
+    public AudioSource ad2;
+    public AudioClip moo;
+    public AudioClip mooPain;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		StartCoroutine(TryToBurn());
+    // Use this for initialization
+    void Start () {
+		ad1 = GetComponent<AudioSource>();
+        ad1.clip = moo;
+        ad1.Play();
+        ad2.clip = mooPain;
 	}
 
-    void OnCollisionEnter2D (Collision2D col)
+    // Update is called once per frame
+    void Update()
+    {
+       StartCoroutine(TryToBurn());
+       
+    }
+
+ 
+        void OnCollisionEnter2D (Collision2D col)
     {
         var force = col.relativeVelocity * col.otherRigidbody.mass;
+        
+        if(col.tag == "fire")
+        {
+            ad2.Play();
+        }
+    
         if (force.magnitude > _forceToKill)
         {
+           
             die();
         }
     }
@@ -39,6 +56,7 @@ public class BevoController : MonoBehaviour, IFireGroupController {
             bool hasRemovedThisFire = firePoint.RemoveFire();
             if(hasRemovedThisFire)
             {
+                
                 hasRemovedAFire = hasRemovedThisFire;
             }
         }
@@ -48,12 +66,16 @@ public class BevoController : MonoBehaviour, IFireGroupController {
 
   	private IEnumerator TryToBurn(){
   		if (CheckIfCompletelyOnFire()){
+         
+        
   			yield return new WaitForSeconds(_secondsToBurnToDeath);
   			if (CheckIfCompletelyOnFire()){
-  				die();
+              
+                die();
   			}
   		}
   	}
+    
 
     private bool CheckIfCompletelyOnFire()
     {
@@ -61,7 +83,7 @@ public class BevoController : MonoBehaviour, IFireGroupController {
     }
 
     void die()
-    {
+    {   
         //here would be a good place for some kind of death animation
         Destroy(gameObject);
     }
