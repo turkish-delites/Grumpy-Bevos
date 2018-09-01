@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264321008209276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.66, y: -3.69, z: 0}
+  m_LocalPosition: {x: -0.1263237, y: -3.7577176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waterPrefab: {fileID: 114255486425220280, guid: 969ada8f3f7686b4f99f18c717002b43,
     type: 2}
-  _waterForce: 500
+  _waterForce: 50
   _activated: 0
   _secondsBetweenDrops: 0.3
 --- !u!212 &212434753585120412

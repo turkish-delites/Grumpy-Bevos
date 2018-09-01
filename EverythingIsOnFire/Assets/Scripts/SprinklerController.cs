@@ -23,8 +23,9 @@ public class SprinklerController : MonoBehaviour {
 
     private IEnumerator Sprinkle()
     {
-        var waterDirection = Random.insideUnitCircle;
+        var waterDirection = Random.onUnitSphere;
         waterDirection.y = Mathf.Abs(waterDirection.y);
+        waterDirection.z = 0;
         Debug.Log(waterDirection);
         waterDirection = new Vector2(waterDirection.x/2, waterDirection.y*2);
         Debug.Log(waterDirection);
