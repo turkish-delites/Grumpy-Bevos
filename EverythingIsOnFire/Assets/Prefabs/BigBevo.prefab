@@ -273,6 +273,9 @@ MonoBehaviour:
   - {fileID: 114591267328124844}
   _secondsToBurnToDeath: 5
   _forceToKill: 8
+  ad2: {fileID: 0}
+  moo: {fileID: 0}
+  mooPain: {fileID: 0}
 --- !u!114 &114181213625490314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,6 +293,7 @@ MonoBehaviour:
   ReadyToBeSetOnFire: 1
   _secondsToWaitToReigniteOnceFirePutOut: 1
   _secondsForFireToWaitBeforeSpreading: 1
+  _canBeSetOnFire: 1
 --- !u!114 &114516828316293856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,6 +311,7 @@ MonoBehaviour:
   ReadyToBeSetOnFire: 1
   _secondsToWaitToReigniteOnceFirePutOut: 1
   _secondsForFireToWaitBeforeSpreading: 1
+  _canBeSetOnFire: 1
 --- !u!114 &114591267328124844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -324,6 +329,7 @@ MonoBehaviour:
   ReadyToBeSetOnFire: 1
   _secondsToWaitToReigniteOnceFirePutOut: 1
   _secondsForFireToWaitBeforeSpreading: 1
+  _canBeSetOnFire: 1
 --- !u!212 &212030453913710272
 SpriteRenderer:
   m_ObjectHideFlags: 1

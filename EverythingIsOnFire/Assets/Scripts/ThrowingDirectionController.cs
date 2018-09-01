@@ -48,7 +48,16 @@ public class ThrowingDirectionController : MonoBehaviour
             var projectileObj = Instantiate(_objectsToThrow[i]);
             projectileObj.transform.parent = _projectileQueueObj.transform;
             projectileObj.transform.localPosition = new Vector3(i,0,0);
-            if(projectileObj.GetComponent<Rigidbody2D>())
+
+            var RBs = projectileObj.GetComponents<Rigidbody2D>().ToList();
+            RBs.AddRange(projectileObj.GetComponentsInChildren<Rigidbody2D>());
+            RBs.ForEach(x => Destroy(x));
+
+            var colliders = projectileObj.GetComponents<Collider2D>().ToList();
+            colliders.AddRange(projectileObj.GetComponentsInChildren<Collider2D>());
+            colliders.ForEach(x => Destroy(x));
+            /*
+            if (projectileObj.GetComponent<Rigidbody2D>())
             {
                 Destroy(projectileObj.GetComponent<Rigidbody2D>());
             }
@@ -57,6 +66,7 @@ public class ThrowingDirectionController : MonoBehaviour
             {
                 Destroy(projectileObj.GetComponent<BoxCollider2D>());
             }
+            */
 
             _projectileQueue.Add(projectileObj);
         }
@@ -117,7 +127,6 @@ public class ThrowingDirectionController : MonoBehaviour
         var mouseDelta =  _start - _end;
         var dir = mouseDelta.normalized;
         var magnitude = mouseDelta.magnitude * _throwingScale;
-        Debug.Log(magnitude);
         ThrowTopObject(dir, magnitude);
         _lineRenderer.SetPosition(0, transform.position);
         _lineRenderer.SetPosition(1, transform.position);

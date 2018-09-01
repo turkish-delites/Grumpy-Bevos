@@ -13,6 +13,12 @@ public class LevelManager : MonoBehaviour {
 
     private void Awake()
     {
+        if(_instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         _instance = this;
     }
 
@@ -20,6 +26,17 @@ public class LevelManager : MonoBehaviour {
     {
         _currentSceneIndex = 0;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void RestartGame()
+    {
+        _currentSceneIndex = 0;
+        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
     }
 
     public void NextScene()

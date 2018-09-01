@@ -13,7 +13,8 @@ public class FirePointController : MonoBehaviour, IFireGroupController
     private float _secondsToWaitToReigniteOnceFirePutOut = 1;
     [SerializeField]
     private float _secondsForFireToWaitBeforeSpreading = 1;
-
+    [SerializeField]
+    private bool _canBeSetOnFire;
     // Use this for initialization
     void Start () {
         ReadyToBeSetOnFire = true;
@@ -30,7 +31,7 @@ public class FirePointController : MonoBehaviour, IFireGroupController
 
     public void AddFire(Fire fireSource)
     {
-        if(AttachedFire == null && ReadyToBeSetOnFire)
+        if(AttachedFire == null && ReadyToBeSetOnFire && _canBeSetOnFire)
         {
             //Debug.Log("adding fire");
             fireSource.ResetFireTimer();

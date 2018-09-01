@@ -81,5 +81,6 @@ MonoBehaviour:
   FirePrefab: {fileID: 1857509520551312, guid: 39dd670954b2147069ca20b281e9a60e, type: 2}
   FirePointGroupController: {fileID: 0}
   ReadyToBeSetOnFire: 1
-  _secondsToWaitToReigniteOnceFirePutOut: 2
-  _secondsForFireToWaitBeforeSpreading: 2
+  _secondsToWaitToReigniteOnceFirePutOut: 0.25
+  _secondsForFireToWaitBeforeSpreading: 0.25
+  _canBeSetOnFire: 1
