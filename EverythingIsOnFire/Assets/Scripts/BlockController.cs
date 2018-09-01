@@ -64,7 +64,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
     void OnCollisionEnter2D(Collision2D collision)
     {
         var force = collision.relativeVelocity * collision.otherRigidbody.mass;
-        Debug.Log(force);
+        //Debug.Log(force);
         if (force.magnitude > _forceToKill)
         {
             collision.otherRigidbody.velocity = collision.otherRigidbody.velocity * .5f;
