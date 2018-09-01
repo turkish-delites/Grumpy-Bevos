@@ -16,14 +16,13 @@ public class ThrowingDirectionController : MonoBehaviour
     private float MaxPlayerPullBack;
     private List<GameObject> _projectileQueue;
 
-    private Vector3 _start, _end;
+    private Vector3 _mouseDelta, _prevMousePoint;
 
 	void Start () {
-        _start = _end = Vector3.zero;
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.positionCount = 2;
-        _lineRenderer.SetPosition(0, _start);
-        _lineRenderer.SetPosition(1, _end);
+        _lineRenderer.SetPosition(0, Vector3.zero);
+        _lineRenderer.SetPosition(1, Vector3.zero);
 
         SetUpProjectileQueue();
     }
@@ -56,17 +55,6 @@ public class ThrowingDirectionController : MonoBehaviour
             var colliders = projectileObj.GetComponents<Collider2D>().ToList();
             colliders.AddRange(projectileObj.GetComponentsInChildren<Collider2D>());
             colliders.ForEach(x => Destroy(x));
-            /*
-            if (projectileObj.GetComponent<Rigidbody2D>())
-            {
-                Destroy(projectileObj.GetComponent<Rigidbody2D>());
-            }
-
-            if (projectileObj.GetComponent<BoxCollider2D>())
-            {
-                Destroy(projectileObj.GetComponent<BoxCollider2D>());
-            }
-            */
 
             _projectileQueue.Add(projectileObj);
         }
@@ -90,17 +78,18 @@ public class ThrowingDirectionController : MonoBehaviour
         }
     }
 
-    private void UpdateEnd()
+    private void UpdateDelta()
     {
         var currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var prevEnd = _end;
-        _end = currentMousePos;
-        var mouseDelta = _end - _start;
-        if(mouseDelta.magnitude > MaxPlayerPullBack)
+
+        _mouseDelta += currentMousePos - _prevMousePoint;
+
+        _prevMousePoint = currentMousePos;
+        if(_mouseDelta.magnitude > MaxPlayerPullBack)
         {
-            mouseDelta = mouseDelta.normalized * MaxPlayerPullBack;
-            _end = _start + mouseDelta;
+            _mouseDelta = _mouseDelta.normalized * MaxPlayerPullBack;
         }
+        
     }
 
     private void OnMouseDown()
@@ -109,24 +98,23 @@ public class ThrowingDirectionController : MonoBehaviour
         _lineRenderer.SetPosition(0, currentPos);
         _lineRenderer.SetPosition(1, currentPos);
         var currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        _start = currentMousePos;
-        _end = currentMousePos;
+        _mouseDelta = Vector3.zero;
     }
 
     private void OnMouseDrag()
     {
-        UpdateEnd();
-        var mouseDelta = _end - _start;
+        UpdateDelta();
         var currentPos = transform.position;
 
-        _lineRenderer.SetPosition(1, currentPos + mouseDelta);
+        _lineRenderer.SetPosition(1, currentPos + _mouseDelta);
     }
 
     private void OnMouseUp()
     {
-        var mouseDelta =  _start - _end;
-        var dir = mouseDelta.normalized;
-        var magnitude = mouseDelta.magnitude * _throwingScale;
+        UpdateDelta();
+        _mouseDelta = -_mouseDelta;
+        var dir = _mouseDelta.normalized;
+        var magnitude = _mouseDelta.magnitude * _throwingScale;
         ThrowTopObject(dir, magnitude);
         _lineRenderer.SetPosition(0, transform.position);
         _lineRenderer.SetPosition(1, transform.position);
