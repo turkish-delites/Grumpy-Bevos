@@ -19,4 +19,9 @@ public class RestartButton : MonoBehaviour {
     {
         LevelManager.Instance.NextScene();
     }
+
+    public void Quit()
+    {
+        LevelManager.Instance.Quit();
+    }
 }

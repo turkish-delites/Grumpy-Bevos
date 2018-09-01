@@ -8,11 +8,12 @@ public class LevelManager : MonoBehaviour {
     public static LevelManager Instance { get { return _instance; } }
     [SerializeField]
     private List<string> _sceneNames;
-
+    [SerializeField]
     private int _currentSceneIndex;
 
     private void Awake()
     {
+        Debug.Log("awake " + name);
         if(_instance != null)
         {
             Destroy(gameObject);
