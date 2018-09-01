@@ -653,8 +653,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectsToThrow:
-  - {fileID: 1072572927766842, guid: d9290668862a9a14c9823350f7f64c5d, type: 2}
-  - {fileID: 0}
+  - {fileID: 1191274896816312, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
+  - {fileID: 1191274896816312, guid: a4228bff9a2cbc140ba111752e163561, type: 2}
   _throwingScale: 50
   _projectileQueueObj: {fileID: 909013995}
 --- !u!120 &1205511860
