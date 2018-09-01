@@ -15,6 +15,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
     private float _piercingShotSpeedToBreak = 0f;
     [SerializeField]
     private float _secondsFromFullBurnToBreak = 1f;
+    private Coroutine _destroyAfterTimerCoroutine;
 
     void Start(){
         AddFirePoints();
@@ -22,12 +23,15 @@ public class BlockController : MonoBehaviour, IFireGroupController
 
     // Update is called once per frame
     void Update () {
-        StartCoroutine(CheckIfCompletelyOnFire());
+        if (_destroyAfterTimerCoroutine == null && _firePoints.TrueForAll(x => x.AttachedFire != null))
+        {
+            _destroyAfterTimerCoroutine = StartCoroutine(DestroyAfterTimer());
+        }
 	}
 
     public bool RemoveAllFires()
     {
-        Debug.Log("removing fires");
+        //Debug.Log("removing fires");
         bool hasRemovedAFire = false;
         foreach(var firePoint in _firePoints)
         {
@@ -38,16 +42,23 @@ public class BlockController : MonoBehaviour, IFireGroupController
             }
         }
 
+        InterruptFireDestruction();
         return hasRemovedAFire;
     }
 
-    private IEnumerator CheckIfCompletelyOnFire()
+    private void InterruptFireDestruction()
     {
-        if(_firePoints.TrueForAll(x => x.AttachedFire != null))
+        if(_destroyAfterTimerCoroutine != null)
         {
-            yield return new WaitForSeconds(_secondsFromFullBurnToBreak);
-            Destroy(_mainBlockObject);
+            StopCoroutine(_destroyAfterTimerCoroutine);
+            _destroyAfterTimerCoroutine = null;
         }
+    }
+
+    private IEnumerator DestroyAfterTimer()
+    {
+        yield return new WaitForSeconds(_secondsFromFullBurnToBreak);
+        Destroy(_mainBlockObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
