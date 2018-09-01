@@ -85,10 +85,9 @@ public class BlockController : MonoBehaviour, IFireGroupController
 
         List<float> y_points = new List<float>();
         List<float> x_points = new List<float>();
-
-
+        
         //create the x points
-        if (x % 2 == 0)
+        if ((int)x % 2 == 0)
         {
             for(int i = 0; i < x; ++i)
             {
@@ -106,7 +105,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
         }
 
         //create the y points
-        if (y % 2 == 0)
+        if ((int)y % 2 == 0)
         {
             for (int i = 0; i < y; ++i)
             {
@@ -123,11 +122,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
             }
         }
 
-        foreach (float point in x_points)
-        {
-            Debug.Log(point);
-        }
-
+        //add the firepoints at all the cross sections
         foreach(float xpoint in x_points)
         {
             foreach(float ypoint in y_points)
