@@ -61,6 +61,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
     }
 
     private void AddFirePoints(){
+        _firePoints = new List<FirePointController>();
         var size = _mainBlockObject.gameObject.transform.localScale;
         Debug.Log(size);
         float x = Mathf.Floor(size.x);
