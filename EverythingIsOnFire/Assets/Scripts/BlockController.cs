@@ -12,7 +12,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
     [SerializeField]
     private GameObject _mainBlockObject;
     [SerializeField]
-    private float _piercingShotSpeedToBreak = 0f;
+    private float _forceToKill = 10f;
     [SerializeField]
     private float _secondsFromFullBurnToBreak = 1f;
     private Coroutine _destroyAfterTimerCoroutine;
@@ -61,12 +61,13 @@ public class BlockController : MonoBehaviour, IFireGroupController
         Destroy(_mainBlockObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.GetComponent<PiercingShot>() != null &&
-            collision.GetComponent<Rigidbody2D>().velocity.magnitude > _piercingShotSpeedToBreak)
+        var force = collision.relativeVelocity * collision.otherRigidbody.mass;
+        Debug.Log(force);
+        if (force.magnitude > _forceToKill)
         {
-            collision.GetComponent<Rigidbody2D>().velocity = collision.GetComponent<Rigidbody2D>().velocity * .5f;
+            collision.otherRigidbody.velocity = collision.otherRigidbody.velocity * .5f;
             Destroy(_mainBlockObject);
         }
     }
