@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4888598992485730}
   - component: {fileID: 212876738338712170}
   - component: {fileID: 50458469998045138}
-  - component: {fileID: 61231326403801802}
   m_Layer: 0
   m_Name: SlowBurningSupport
   m_TagString: Untagged
@@ -57,6 +56,7 @@ GameObject:
   - component: {fileID: 4259243457838752}
   - component: {fileID: 61186940243416088}
   - component: {fileID: 114652881585025960}
+  - component: {fileID: 61804571115533876}
   m_Layer: 0
   m_Name: PhysicalDamageTrigger
   m_TagString: Untagged
@@ -97,8 +97,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1222808229615960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.59, y: -3.17, z: -0.04168472}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalPosition: {x: -2.87, y: -3.22, z: -0.04168472}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4259243457838752}
   - {fileID: 4868969225153736}
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1594274545052268}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -149,31 +149,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.66}
-  m_EdgeRadius: 0
---- !u!61 &61231326403801802
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1222808229615960}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 0.5, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!61 &61627332536004356
 BoxCollider2D:
@@ -199,6 +174,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 5.312807, y: 0.5377544}
+  m_EdgeRadius: 0
+--- !u!61 &61804571115533876
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1594274545052268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!82 &82291371844054618
 AudioSource:
@@ -325,7 +325,7 @@ MonoBehaviour:
   firePointPrefab: {fileID: 1695088020225198, guid: 89fc2131be56247d897270b98c2e6594,
     type: 2}
   _mainBlockObject: {fileID: 1222808229615960}
-  _piercingShotSpeedToBreak: 0
+  _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
 --- !u!212 &212876738338712170
 SpriteRenderer:
