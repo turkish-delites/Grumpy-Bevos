@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 50612948730219054}
   - component: {fileID: 114423751144791320}
   - component: {fileID: 212719600831840470}
-  - component: {fileID: 61764057659052724}
+  - component: {fileID: 58999596084805656}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -38,9 +38,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4653465987370838}
-  - component: {fileID: 212845610333173856}
   - component: {fileID: 114283679161696756}
-  - component: {fileID: 61671674557028492}
+  - component: {fileID: 212664482221040604}
+  - component: {fileID: 58073496944539096}
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
@@ -70,7 +70,7 @@ Transform:
   m_GameObject: {fileID: 1914912392403478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4366164653032896}
   m_RootOrder: 0
@@ -95,56 +95,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61671674557028492
-BoxCollider2D:
+--- !u!58 &58073496944539096
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914912392403478}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f36115e94486dba42a526197ee7bd9bc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 0.5, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
-  m_EdgeRadius: 0
---- !u!61 &61764057659052724
-BoxCollider2D:
+  m_Radius: 0.25
+--- !u!58 &58999596084805656
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1191274896816312}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f36115e94486dba42a526197ee7bd9bc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 0.5, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
-  m_EdgeRadius: 0
+  m_Radius: 0.25
 --- !u!114 &114283679161696756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,12 +153,12 @@ MonoBehaviour:
   AttachedFire: {fileID: 1914912392403478}
   DoNotExtinguish: 1
   _secondsUntillFireExtinguished: 5
---- !u!212 &212719600831840470
+--- !u!212 &212664482221040604
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191274896816312}
+  m_GameObject: {fileID: 1914912392403478}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -219,13 +199,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!212 &212845610333173856
+--- !u!212 &212719600831840470
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1914912392403478}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1191274896816312}
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -254,8 +234,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 695aada3944d63642921c7f7dd7d8770, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 44c13a92afdbf4685afc7c31db806ebd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
