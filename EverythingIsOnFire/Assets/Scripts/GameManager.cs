@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     private void CheckIfAllBevoDead()
     {
         var aliveBevos = GameObject.FindGameObjectsWithTag("Bevo");
-        Debug.Log(aliveBevos.Count());
+        //Debug.Log(aliveBevos.Count());
         if(aliveBevos.Count() == 0)
         {
             Debug.Log("changing scene");
