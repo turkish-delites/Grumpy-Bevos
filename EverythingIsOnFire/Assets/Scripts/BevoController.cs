@@ -34,7 +34,6 @@ public class BevoController : MonoBehaviour, IFireGroupController {
     void OnCollisionEnter2D (Collision2D col)
     {
         var force = col.relativeVelocity * col.otherRigidbody.mass;
-        Debug.Log(force);
         if (force.magnitude > _forceToKill)
         {
             ad2.Play();

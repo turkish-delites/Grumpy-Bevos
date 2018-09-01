@@ -9,31 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1695088020225198}
+  m_RootGameObject: {fileID: 1456194451164150}
   m_IsPrefabAsset: 1
---- !u!1 &1695088020225198
+--- !u!1 &1456194451164150
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4715646737667438}
-  - component: {fileID: 61618784635098610}
-  - component: {fileID: 114241726957157254}
+  - component: {fileID: 4192598497918432}
+  - component: {fileID: 61186889504979202}
+  - component: {fileID: 114005028990887090}
   m_Layer: 0
-  m_Name: FireBuringPoint
+  m_Name: MedBurningPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4715646737667438
+--- !u!4 &4192598497918432
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1695088020225198}
+  m_GameObject: {fileID: 1456194451164150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.165, z: 0}
   m_LocalScale: {x: 1, y: 0.33333334, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61618784635098610
+--- !u!61 &61186889504979202
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1695088020225198}
+  m_GameObject: {fileID: 1456194451164150}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -66,12 +66,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114241726957157254
+--- !u!114 &114005028990887090
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1695088020225198}
+  m_GameObject: {fileID: 1456194451164150}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac48e6901bf1e74c96f5074797d464f, type: 3}
@@ -81,5 +81,5 @@ MonoBehaviour:
   FirePrefab: {fileID: 1857509520551312, guid: 39dd670954b2147069ca20b281e9a60e, type: 2}
   FirePointGroupController: {fileID: 0}
   ReadyToBeSetOnFire: 1
-  _secondsToWaitToReigniteOnceFirePutOut: 2
-  _secondsForFireToWaitBeforeSpreading: 2
+  _secondsToWaitToReigniteOnceFirePutOut: 0.5
+  _secondsForFireToWaitBeforeSpreading: 0.5
