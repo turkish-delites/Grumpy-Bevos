@@ -34,17 +34,19 @@ public class BevoController : MonoBehaviour, IFireGroupController {
         void OnCollisionEnter2D (Collision2D col)
     {
         var force = col.relativeVelocity * col.otherRigidbody.mass;
-        
-        if(col.tag == "fire")
-        {
-            ad2.Play();
-        }
-    
+
         if (force.magnitude > _forceToKill)
         {
-           
+            ad2.Play();
             die();
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.tag == "fire"){
+            ad2.Play();
+        }
+
     }
 
      public bool RemoveAllFires()
