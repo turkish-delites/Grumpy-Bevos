@@ -71,6 +71,11 @@ public class ThrowingDirectionController : MonoBehaviour
             var objectToThrow = Instantiate(topObject);
             objectToThrow.transform.position = transform.position;
             objectToThrow.GetComponent<Rigidbody2D>().AddForce(direction * force);
+            if(objectToThrow.GetComponent<LanternController>())
+            {
+                objectToThrow.GetComponent<LanternController>().DoNotExtinguish = false;
+            }
+
             PopProjectileQueue();
         }
     }
