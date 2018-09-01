@@ -7,13 +7,13 @@ public class ContactAudio : MonoBehaviour {
 	public AudioClip clipSound;
 	void Awake(){
 		soundSource = GetComponent<AudioSource>();
-    
 		soundSource.clip = clipSound;
 	}
-	// Use this for initialization
-	void OnTriggerEnter2D(Collider2D other){
-        if (other.tag != "fire");
+    // Use this for initialization
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag != "fire" && other.tag != "water") { 
         soundSource.Play();
+         }
 	}
 	// Update is called once per frame
 	
