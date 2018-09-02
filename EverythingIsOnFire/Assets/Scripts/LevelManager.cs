@@ -8,11 +8,18 @@ public class LevelManager : MonoBehaviour {
     public static LevelManager Instance { get { return _instance; } }
     [SerializeField]
     private List<string> _sceneNames;
-
+    [SerializeField]
     private int _currentSceneIndex;
 
     private void Awake()
     {
+        Debug.Log("awake " + name);
+        if(_instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         _instance = this;
     }
 
@@ -20,6 +27,17 @@ public class LevelManager : MonoBehaviour {
     {
         _currentSceneIndex = 0;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void RestartGame()
+    {
+        _currentSceneIndex = 0;
+        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
     }
 
     public void NextScene()
