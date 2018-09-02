@@ -14,6 +14,7 @@ public class BevoController : MonoBehaviour, IFireGroupController {
     public AudioSource ad2;
     public AudioClip moo;
     public AudioClip mooPain;
+    private bool resetBevo = true;
 
     // Use this for initialization
     void Start () {
@@ -41,9 +42,15 @@ public class BevoController : MonoBehaviour, IFireGroupController {
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other){
-        if(other.tag == "fire"){
-            ad2.Play();
+    void OnTriggerStay2D(Collider2D other){
+        if (resetBevo)
+        {
+            if (other.tag == "fire")
+            {
+                ad2.loop = true;
+                ad2.Play();
+                resetBevo = false;
+            }
         }
 
     }
@@ -57,7 +64,9 @@ public class BevoController : MonoBehaviour, IFireGroupController {
             bool hasRemovedThisFire = firePoint.RemoveFire();
             if(hasRemovedThisFire)
             {
-                
+                resetBevo = true;
+                ad2.loop = false;
+                ad2.Stop();
                 hasRemovedAFire = hasRemovedThisFire;
             }
         }

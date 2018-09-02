@@ -11,6 +11,7 @@ TagManager:
   - fireAlarm
   - sprinkler
   - metal
+  - fireBall
   layers:
   - Default
   - TransparentFX

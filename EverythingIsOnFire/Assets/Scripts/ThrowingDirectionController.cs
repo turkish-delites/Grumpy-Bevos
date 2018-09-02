@@ -17,13 +17,13 @@ public class ThrowingDirectionController : MonoBehaviour
     private List<GameObject> _projectileQueue;
 
     private Vector3 _mouseDelta, _prevMousePoint;
-
+    public AudioSource ad;
 	void Start () {
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.positionCount = 2;
         _lineRenderer.SetPosition(0, Vector3.zero);
         _lineRenderer.SetPosition(1, Vector3.zero);
-
+        ad.volume = 0.5f;
         SetUpProjectileQueue();
     }
 
@@ -118,5 +118,6 @@ public class ThrowingDirectionController : MonoBehaviour
         ThrowTopObject(dir, magnitude);
         _lineRenderer.SetPosition(0, transform.position);
         _lineRenderer.SetPosition(1, transform.position);
+        ad.Play();
     }
 }
