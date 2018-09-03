@@ -9,18 +9,22 @@ public class ContactFireBallAudio : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ad.clip = malotov;
-        ad.volume = 0.2f;
+        ad.volume = 0.5f;
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(breakOnce){
-            if((collision.tag == "wood" || collision.tag == "metal" || collision.tag == "fire")){
+        string tagName = collision.otherCollider.gameObject.tag; Debug.Log(tagName);
+        var force = collision.relativeVelocity * collision.otherRigidbody.mass;
+        Debug.Log(force);
+        if (breakOnce){
+            if (force.magnitude > 5.0f)
+            {
                 ad.Play();
                 breakOnce = false;
-               // Debug.Log("broke");
-               
             }
+               
+
            
         }
     }
