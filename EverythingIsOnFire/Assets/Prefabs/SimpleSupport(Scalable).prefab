@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 50052339339725940}
   - component: {fileID: 114807967604648508}
   - component: {fileID: 82390171350487562}
+  - component: {fileID: 114521846487477020}
   m_Layer: 0
   m_Name: SimpleSupport(Scalable)
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 1785209243905452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5741916, y: -2.5829148, z: -0.04168472}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children:
   - {fileID: 4309452740240826}
   m_Father: {fileID: 0}
@@ -311,7 +312,9 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+
 --- !u!114 &114652657637177120
+
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
