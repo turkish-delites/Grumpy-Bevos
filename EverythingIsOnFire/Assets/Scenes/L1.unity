@@ -4150,6 +4150,7 @@ GameObject:
   - component: {fileID: 1901816747}
   - component: {fileID: 1901816746}
   - component: {fileID: 1901816745}
+  - component: {fileID: 1901816749}
   m_Layer: 0
   m_Name: SlowBurningSupport
   m_TagString: wood
@@ -4336,6 +4337,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1901816749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1901816744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee1eab78206be24a91b0804225e1554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2087559579
 GameObject:
   m_ObjectHideFlags: 0
