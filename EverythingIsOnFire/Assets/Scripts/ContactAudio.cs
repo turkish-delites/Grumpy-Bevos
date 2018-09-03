@@ -8,7 +8,7 @@ public class ContactAudio : MonoBehaviour {
 	void Awake(){
 		soundSource = GetComponent<AudioSource>();
 		soundSource.clip = clipSound;
-        soundSource.volume = 0.1f;
+        soundSource.volume = 0.05f;
 	}
     // Use this for initialization
     void OnTriggerEnter2D(Collider2D other) {
