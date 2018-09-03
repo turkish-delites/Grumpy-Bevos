@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour {
     private static LevelManager _instance;
     public static LevelManager Instance { get { return _instance; } }
     [SerializeField]
-    private List<string> _sceneNames;
+    public List<string> _sceneNames;
     [SerializeField]
     private int _currentSceneIndex;
 
@@ -32,6 +32,11 @@ public class LevelManager : MonoBehaviour {
     public void ReloadScene()
     {
         SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+    }
+
+    public void LoadChosenScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(_sceneNames[sceneIndex]);
     }
 
     public void NextScene()
