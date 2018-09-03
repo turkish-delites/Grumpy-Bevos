@@ -398,6 +398,24 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 139054324}
   m_Script: {fileID: 11500000, guid: de4e15af8a55015408674813d666a552, type: 3}
+--- !u!114 &139054329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114553098310211194, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 139054324}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &139054330 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114324771558503084, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 139054324}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &139054331 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114525616187827514, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 139054324}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &142528848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,9 +1331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460fab643e2be4f5a835479f098af48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startB: {fileID: 0}
-  helpB: {fileID: 0}
-  exitB: {fileID: 0}
+  startB: {fileID: 139054331}
+  helpB: {fileID: 139054330}
+  exitB: {fileID: 139054329}
   backB: {fileID: 0}
   ad: {fileID: 1076930400}
 --- !u!4 &1076930402
