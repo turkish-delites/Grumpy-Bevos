@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class ContactAudio : MonoBehaviour {
     AudioSource soundSource;
+    //public BoxCollider2D cd;
 	public AudioClip clipSound;
 	void Awake(){
 		soundSource = GetComponent<AudioSource>();
 		soundSource.clip = clipSound;
-        soundSource.volume = 0.05f;
+        soundSource.volume = 0.1f;
 	}
     // Use this for initialization
-    void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag != "fire" && other.tag != "water") { 
+    void OnCollisionEnter2D(Collision2D collision) {
+        string tagName = collision.otherCollider.gameObject.tag;
+        if (tagName != "fire" && tagName != "water") { 
             soundSource.Play();
         }
 	}

@@ -12,13 +12,14 @@ public class ContactFireBallAudio : MonoBehaviour {
         ad.volume = 0.2f;
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(breakOnce){
-            if((collision.tag == "wood" || collision.tag == "metal" || collision.tag == "fire")){
+        string tagName = collision.otherCollider.gameObject.tag; Debug.Log(tagName);
+        if (breakOnce){
+            if((tagName == "wood" || tagName == "metal" || tagName == "fire")){
                 ad.Play();
                 breakOnce = false;
-               // Debug.Log("broke");
+
                
             }
            
