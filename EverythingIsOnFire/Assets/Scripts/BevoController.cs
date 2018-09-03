@@ -21,6 +21,7 @@ public class BevoController : MonoBehaviour, IFireGroupController {
 		ad1 = GetComponent<AudioSource>();
         ad1.clip = moo;
         ad1.Play();
+        ad2.volume = 0.3f;
         ad2.clip = mooPain;
 	}
 

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 
 public class RestartButton : MonoBehaviour {
+
     public void RestartGame()
     {
         LevelManager.Instance.RestartGame();
