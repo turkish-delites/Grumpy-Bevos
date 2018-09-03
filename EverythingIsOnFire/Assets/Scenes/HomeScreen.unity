@@ -1087,6 +1087,7 @@ MonoBehaviour:
   - HomeScreen
   - L1
   - L2
+  - L2.5
   - L3
   - L4
   _currentSceneIndex: 0
@@ -3355,6 +3356,7 @@ MonoBehaviour:
   - HomeScreen
   - L1
   - L2
+  - L2.5
   - L3
   - L4
   _currentSceneIndex: 0
