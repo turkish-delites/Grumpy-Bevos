@@ -9,6 +9,7 @@ public class ContactFireBallAudio : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ad.clip = malotov;
+        ad.volume = 0.2f;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
