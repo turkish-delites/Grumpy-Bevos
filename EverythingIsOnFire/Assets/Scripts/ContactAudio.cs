@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ContactAudio : MonoBehaviour {
     AudioSource soundSource;
-    //public BoxCollider2D cd;
 	public AudioClip clipSound;
 	void Awake(){
 		soundSource = GetComponent<AudioSource>();
@@ -14,10 +13,10 @@ public class ContactAudio : MonoBehaviour {
     // Use this for initialization
     void OnCollisionEnter2D(Collision2D collision) {
         string tagName = collision.otherCollider.gameObject.tag;
-        if (tagName != "fire" && tagName != "water") { 
+        if (tagName == "fire" || tagName == "fireBall") { 
             soundSource.Play();
         }
 	}
-	// Update is called once per frame
+
 	
 }

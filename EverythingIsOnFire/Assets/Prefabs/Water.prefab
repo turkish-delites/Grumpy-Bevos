@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114255486425220280}
   - component: {fileID: 50930068078262828}
   - component: {fileID: 82186963744128194}
-  - component: {fileID: 58450401424058444}
   - component: {fileID: 58244092607298808}
   m_Layer: 0
   m_Name: Water
@@ -80,21 +79,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!58 &58450401424058444
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1467314306938616}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.32
 --- !u!82 &82186963744128194
 AudioSource:
   m_ObjectHideFlags: 1
