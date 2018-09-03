@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class RestartButton : MonoBehaviour {
-
-    public void RestartGame()
+public class InGameMenu : MonoBehaviour {
+    public void MainMenu()
     {
-        LevelManager.Instance.RestartGame();
+        LevelManager.Instance.MainMenu();
     }
 
     public void RestartLevel()

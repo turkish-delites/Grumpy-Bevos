@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
+using UnityEngine.Events;
 
 public class ButtonAudio : MonoBehaviour
 {
@@ -13,11 +15,20 @@ public class ButtonAudio : MonoBehaviour
     public AudioSource ad;
     private void Start()
     {
-        startB.onClick.AddListener(TaskOnClick);
-        helpB.onClick.AddListener(TaskOnClick);
-        exitB.onClick.AddListener(TaskOnClick);
-        backB.onClick.AddListener(TaskOnClick);
+        TryAddListener(startB);
+        TryAddListener(helpB);
+        TryAddListener(exitB);
+        TryAddListener(backB);
     }
+
+    void TryAddListener(Button button)
+    {
+        if(button != null)
+        {
+            button.onClick.AddListener(TaskOnClick);
+        }
+    }
+
     void TaskOnClick(){
         ad.Play();
     }

@@ -29,12 +29,6 @@ public class LevelManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    public void RestartGame()
-    {
-        _currentSceneIndex = 0;
-        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
-    }
-
     public void ReloadScene()
     {
         SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
@@ -44,6 +38,12 @@ public class LevelManager : MonoBehaviour {
     {
         _currentSceneIndex++;
         _currentSceneIndex %= _sceneNames.Count;
+        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+    }
+
+    public void MainMenu()
+    {
+        _currentSceneIndex = 0;
         SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
     }
 
