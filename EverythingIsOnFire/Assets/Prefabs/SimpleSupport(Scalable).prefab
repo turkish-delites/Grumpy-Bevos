@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 50052339339725940}
   - component: {fileID: 114807967604648508}
   - component: {fileID: 82390171350487562}
-  - component: {fileID: 114521846487477020}
   m_Layer: 0
   m_Name: SimpleSupport(Scalable)
   m_TagString: Untagged
@@ -312,9 +311,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-
 --- !u!114 &114652657637177120
-
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,6 +352,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1785209243905452}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!212 &212620504049935366
 SpriteRenderer:
   m_ObjectHideFlags: 1
