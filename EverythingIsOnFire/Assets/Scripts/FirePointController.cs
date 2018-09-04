@@ -45,7 +45,8 @@ public class FirePointController : MonoBehaviour, IFireGroupController
     public void OnTriggerStay2D(Collider2D collision)
     {
         Fire other = collision.gameObject.GetComponent<Fire>();
-        //Debug.Log("out : " + collision.name + " " + other + " " + name);
+
+        //Debug.Log("out : " + collision.name + " " + other + " " + name + " " + (other != null && other.ReadyToSpread));
         if (other != null && other.ReadyToSpread)
         {
             //Debug.Log("inside : " + collision.name + " " + other + " " + name);

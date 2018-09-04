@@ -15,12 +15,17 @@ public class BlockController : MonoBehaviour, IFireGroupController
     private float _forceToKill = 10f;
     [SerializeField]
     private float _secondsFromFullBurnToBreak = 1f;
+    [SerializeField]
+    private bool _generateFirePoints;
 
     private Coroutine _destroyAfterTimerCoroutine;
 
     void Start()
     {
-        AddFirePoints();
+        if(_generateFirePoints)
+        {
+            AddFirePoints();
+        }
     }
 
     // Update is called once per frame
@@ -60,7 +65,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
 
     private IEnumerator DestroyAfterTimer()
     {
-        Debug.Log("here");
+        //Debug.Log("here");
         yield return new WaitForSeconds(_secondsFromFullBurnToBreak);
         Destroy(_mainBlockObject);
     }
