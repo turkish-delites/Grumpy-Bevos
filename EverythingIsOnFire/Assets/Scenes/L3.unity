@@ -938,6 +938,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 95982187}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!50 &95982190
 Rigidbody2D:
   serializedVersion: 4
@@ -1848,6 +1849,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1982591710}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &203620371
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2189,9 +2191,6 @@ MonoBehaviour:
   - {fileID: 1056284997}
   _secondsToBurnToDeath: 2.5
   _forceToKill: 5
-  ad2: {fileID: 254319728}
-  moo: {fileID: 8300000, guid: 12e339b17f5a3d94799c2422c8034f6e, type: 3}
-  mooPain: {fileID: 8300000, guid: d6299f96e42a32b4c8e8d626a4a0cf49, type: 3}
 --- !u!61 &254319731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2503,6 +2502,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 66647423}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!1 &294727614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,6 +2916,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1967317433}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &328532788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3187,6 +3188,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 29318179}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &361240041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3678,6 +3680,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 454916614}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!50 &454916617
 Rigidbody2D:
   serializedVersion: 4
@@ -3886,6 +3889,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1044108571}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!4 &481424626
 Transform:
   m_ObjectHideFlags: 0
@@ -4461,6 +4465,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 823289319}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &615492752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4925,6 +4930,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 194934174}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &816409660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5568,6 +5574,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1515746269}
   - {fileID: 1661335360}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -5657,6 +5664,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 2080971460}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!1 &938289968
 GameObject:
   m_ObjectHideFlags: 0
@@ -5734,6 +5742,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1853831821}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &938289972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5849,8 +5858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168, y: -266.1088}
-  m_SizeDelta: {x: 336, y: 106.44352}
+  m_AnchoredPosition: {x: 83.037506, y: -134.04}
+  m_SizeDelta: {x: 166.07501, y: 53.615997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1009295628
 Transform:
@@ -6280,6 +6289,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1073258836}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!50 &1073258839
 Rigidbody2D:
   serializedVersion: 4
@@ -6698,6 +6708,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1215807959}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &1137158091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6775,6 +6786,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1168574543}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!50 &1168574546
 Rigidbody2D:
   serializedVersion: 4
@@ -7632,6 +7644,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1836604589}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!1 &1331760192
 GameObject:
   m_ObjectHideFlags: 0
@@ -7851,6 +7864,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1335899327}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!50 &1335899330
 Rigidbody2D:
   serializedVersion: 4
@@ -8973,6 +8987,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
+--- !u!224 &1515746269 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224939170663395824, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 1661335359}
 --- !u!1 &1515861723
 GameObject:
   m_ObjectHideFlags: 0
@@ -9320,62 +9339,62 @@ Prefab:
     - target: {fileID: 224906830283290194, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 137.55
+      value: 83.037506
       objectReference: {fileID: 0}
     - target: {fileID: 224906830283290194, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -39.029297
+      value: -26.807999
       objectReference: {fileID: 0}
     - target: {fileID: 224906830283290194, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 275.1
+      value: 166.07501
       objectReference: {fileID: 0}
     - target: {fileID: 224906830283290194, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 78.05859
+      value: 53.615997
       objectReference: {fileID: 0}
     - target: {fileID: 224063825120918084, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 137.55
+      value: 83.037506
       objectReference: {fileID: 0}
     - target: {fileID: 224063825120918084, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -117.08789
+      value: -80.423996
       objectReference: {fileID: 0}
     - target: {fileID: 224063825120918084, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 275.1
+      value: 166.07501
       objectReference: {fileID: 0}
     - target: {fileID: 224063825120918084, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 78.05859
+      value: 53.615997
       objectReference: {fileID: 0}
     - target: {fileID: 224410078338117872, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 137.55
+      value: 83.037506
       objectReference: {fileID: 0}
     - target: {fileID: 224410078338117872, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -195.14648
+      value: -134.04
       objectReference: {fileID: 0}
     - target: {fileID: 224410078338117872, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 275.1
+      value: 166.07501
       objectReference: {fileID: 0}
     - target: {fileID: 224410078338117872, guid: 658cdfc5aa09e5249b371ea28713c327,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 78.05859
+      value: 53.615997
       objectReference: {fileID: 0}
     - target: {fileID: 1607419345503996, guid: 658cdfc5aa09e5249b371ea28713c327, type: 2}
       propertyPath: m_Name
@@ -9427,7 +9446,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 658cdfc5aa09e5249b371ea28713c327, type: 2}
   m_IsPrefabAsset: 0
---- !u!224 &1661335360 stripped
 --- !u!224 &1661335360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9443,7 +9461,7 @@ RectTransform:
   - {fileID: 1999540851}
   - {fileID: 1002590483}
   m_Father: {fileID: 882063857}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.70432353}
   m_AnchorMax: {x: 0.175, y: 1}
@@ -9911,6 +9929,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1708701305}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!50 &1708701308
 Rigidbody2D:
   serializedVersion: 4
@@ -10054,6 +10073,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 580741245}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!1 &1773343357
 GameObject:
   m_ObjectHideFlags: 0
@@ -10362,6 +10382,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1824769276}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!50 &1824769279
 Rigidbody2D:
   serializedVersion: 4
@@ -11248,8 +11269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168, y: -53.22176}
-  m_SizeDelta: {x: 336, y: 106.44352}
+  m_AnchoredPosition: {x: 83.037506, y: -26.807999}
+  m_SizeDelta: {x: 166.07501, y: 53.615997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933162067
 MonoBehaviour:
@@ -11747,8 +11768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168, y: -159.66528}
-  m_SizeDelta: {x: 336, y: 106.44352}
+  m_AnchoredPosition: {x: 83.037506, y: -80.423996}
+  m_SizeDelta: {x: 166.07501, y: 53.615997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999540852
 MonoBehaviour:
@@ -12031,6 +12052,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 2141150993}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!61 &2060869733
 BoxCollider2D:
   m_ObjectHideFlags: 0
