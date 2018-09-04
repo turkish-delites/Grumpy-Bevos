@@ -419,6 +419,7 @@ MonoBehaviour:
   - {fileID: 114123736535610688}
   _secondsToBurnToDeath: 4
   _forceToKill: 5
+  _mainObject: {fileID: 1618363019412812}
 --- !u!212 &212614978970946756
 SpriteRenderer:
   m_ObjectHideFlags: 1
