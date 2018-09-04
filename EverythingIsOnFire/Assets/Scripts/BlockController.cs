@@ -65,7 +65,7 @@ public class BlockController : MonoBehaviour, IFireGroupController
 
     private IEnumerator DestroyAfterTimer()
     {
-        Debug.Log("here");
+        //Debug.Log("here");
         yield return new WaitForSeconds(_secondsFromFullBurnToBreak);
         Destroy(_mainBlockObject);
     }
