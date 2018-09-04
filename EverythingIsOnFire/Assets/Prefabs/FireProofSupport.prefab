@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114150910731872668}
   - component: {fileID: 82984615682285578}
   - component: {fileID: 114195374706297158}
+  - component: {fileID: 114598919350766702}
   m_Layer: 0
   m_Name: FireProofSupport
   m_TagString: metal
@@ -202,7 +203,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1855610796300596}
   _forceToKill: 1000
   _secondsFromFullBurnToBreak: 1
-  _generateFirePoints: 0
+  _generateFirePoints: 1
 --- !u!114 &114195374706297158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,6 +216,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clipSound: {fileID: 8300000, guid: 0bcba1efcff9260478f09e2639283906, type: 3}
+--- !u!114 &114598919350766702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1855610796300596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee1eab78206be24a91b0804225e1554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212726754369146828
 SpriteRenderer:
   m_ObjectHideFlags: 1

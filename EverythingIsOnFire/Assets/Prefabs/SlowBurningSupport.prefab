@@ -255,7 +255,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1222808229615960}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
-  _generateFirePoints: 0
+  _generateFirePoints: 1
 --- !u!212 &212876738338712170
 SpriteRenderer:
   m_ObjectHideFlags: 1
