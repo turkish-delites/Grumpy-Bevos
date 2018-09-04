@@ -229,7 +229,7 @@ MonoBehaviour:
   clipSound: {fileID: 8300000, guid: f9bc706f0beefc5448f45b586eddac8f, type: 3}
 --- !u!114 &114499593845091002
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1222808229615960}
@@ -255,6 +255,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1222808229615960}
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!212 &212876738338712170
 SpriteRenderer:
   m_ObjectHideFlags: 1
