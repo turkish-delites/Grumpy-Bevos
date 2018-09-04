@@ -7,13 +7,12 @@ public class LevelManager : MonoBehaviour {
     private static LevelManager _instance;
     public static LevelManager Instance { get { return _instance; } }
     [SerializeField]
-    public List<string> _sceneNames;
+    public List<string> SceneNames;
     [SerializeField]
     private int _currentSceneIndex;
 
     private void Awake()
     {
-        Debug.Log("awake " + name);
         if(_instance != null)
         {
             Destroy(gameObject);
@@ -31,25 +30,26 @@ public class LevelManager : MonoBehaviour {
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+        SceneManager.LoadScene(SceneNames[_currentSceneIndex]);
     }
 
     public void LoadChosenScene(int sceneIndex)
     {
-        SceneManager.LoadScene(_sceneNames[sceneIndex]);
+        _currentSceneIndex = sceneIndex;
+        SceneManager.LoadScene(SceneNames[sceneIndex]);
     }
 
     public void NextScene()
     {
         _currentSceneIndex++;
-        _currentSceneIndex %= _sceneNames.Count;
-        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+        _currentSceneIndex %= SceneNames.Count;
+        SceneManager.LoadScene(SceneNames[_currentSceneIndex]);
     }
 
     public void MainMenu()
     {
         _currentSceneIndex = 0;
-        SceneManager.LoadScene(_sceneNames[_currentSceneIndex]);
+        SceneManager.LoadScene(SceneNames[_currentSceneIndex]);
     }
 
     public void Quit()
