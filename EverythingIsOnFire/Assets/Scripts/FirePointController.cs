@@ -46,10 +46,10 @@ public class FirePointController : MonoBehaviour, IFireGroupController
     {
         Fire other = collision.gameObject.GetComponent<Fire>();
 
-        Debug.Log("out : " + collision.name + " " + other + " " + name + " " + (other != null && other.ReadyToSpread));
+        //Debug.Log("out : " + collision.name + " " + other + " " + name + " " + (other != null && other.ReadyToSpread));
         if (other != null && other.ReadyToSpread)
         {
-            Debug.Log("inside : " + collision.name + " " + other + " " + name);
+            //Debug.Log("inside : " + collision.name + " " + other + " " + name);
             AddFire(other);
         }
     }

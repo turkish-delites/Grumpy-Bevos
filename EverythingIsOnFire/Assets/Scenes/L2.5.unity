@@ -1366,6 +1366,11 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 5.784368
       objectReference: {fileID: 0}
+    - target: {fileID: 114656566722736502, guid: 12835810324ce464a80ec9f6c4227253,
+        type: 2}
+      propertyPath: _generateFirePoints
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12835810324ce464a80ec9f6c4227253, type: 2}
   m_IsPrefabAsset: 0
