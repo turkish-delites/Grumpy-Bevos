@@ -12,10 +12,9 @@ public class ContactAudio : MonoBehaviour {
 	}
     // Use this for initialization
     void OnCollisionEnter2D(Collision2D collision) {
-        string tagName = collision.otherCollider.gameObject.tag;
-        if (tagName == "fire" || tagName == "fireBall") { 
+        //string tagName = collision.otherCollider.gameObject.tag;
+        soundSource.pitch = Random.Range(0.95f, 1.05f);
             soundSource.Play();
-        }
 	}
 
 	
