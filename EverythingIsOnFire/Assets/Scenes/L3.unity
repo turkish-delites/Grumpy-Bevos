@@ -5574,7 +5574,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 1515746269}
+=======
+  - {fileID: 1661335367}
+>>>>>>> master
   - {fileID: 1661335360}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -9663,6 +9667,11 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!224 &1661335367 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224939170663395824, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 1661335359}
 --- !u!114 &1668456344
 MonoBehaviour:
   m_ObjectHideFlags: 0

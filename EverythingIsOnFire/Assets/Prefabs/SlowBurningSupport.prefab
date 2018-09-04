@@ -21,9 +21,6 @@ GameObject:
   - component: {fileID: 4888598992485730}
   - component: {fileID: 212876738338712170}
   - component: {fileID: 50458469998045138}
-  - component: {fileID: 61862437131006994}
-  - component: {fileID: 114389338359888680}
-  - component: {fileID: 82215098095064348}
   - component: {fileID: 114499593845091002}
   m_Layer: 0
   m_Name: SlowBurningSupport
@@ -41,6 +38,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4259243457838752}
   - component: {fileID: 114652881585025960}
+  - component: {fileID: 61891289495932998}
+  - component: {fileID: 82491717744197046}
+  - component: {fileID: 114173348538128308}
   m_Layer: 0
   m_Name: PhysicalDamageTrigger
   m_TagString: Untagged
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1222808229615960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.006, y: -2.4710002, z: -0.04168472}
+  m_LocalPosition: {x: 3.4877777, y: -1.6342182, z: -0.04168472}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children:
   - {fileID: 4259243457838752}
@@ -95,12 +95,12 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61862437131006994
+--- !u!61 &61891289495932998
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1222808229615960}
+  m_GameObject: {fileID: 1594274545052268}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -120,12 +120,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!82 &82215098095064348
+--- !u!82 &82491717744197046
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1222808229615960}
+  m_GameObject: {fileID: 1594274545052268}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -215,12 +215,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114389338359888680
+--- !u!114 &114173348538128308
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1222808229615960}
+  m_GameObject: {fileID: 1594274545052268}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fe47e18452514ab1b5a5609f226bd3d, type: 3}
