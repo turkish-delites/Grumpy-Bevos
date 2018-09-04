@@ -560,6 +560,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224939170663395824, guid: 658cdfc5aa09e5249b371ea28713c327,
     type: 2}
   m_PrefabInternal: {fileID: 269529101}
+--- !u!114 &269529103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114553098310211194, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 269529101}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &269529104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114324771558503084, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 269529101}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &269529105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114525616187827514, guid: 658cdfc5aa09e5249b371ea28713c327,
+    type: 2}
+  m_PrefabInternal: {fileID: 269529101}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &305412144
 Prefab:
   m_ObjectHideFlags: 0
@@ -2820,7 +2838,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460fab643e2be4f5a835479f098af48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buttons: []
+  Buttons:
+  - {fileID: 269529105}
+  - {fileID: 269529104}
+  - {fileID: 269529103}
   ad: {fileID: 1837816134}
 --- !u!4 &1837816136
 Transform:
