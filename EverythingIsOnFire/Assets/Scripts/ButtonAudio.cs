@@ -8,17 +8,14 @@ using UnityEngine.Events;
 
 public class ButtonAudio : MonoBehaviour
 {
-    public Button startB;
-    public Button helpB;
-    public Button exitB;
-    public Button backB;
+    public Button[] Buttons;
     public AudioSource ad;
     private void Start()
     {
-        TryAddListener(startB);
-        TryAddListener(helpB);
-        TryAddListener(exitB);
-        TryAddListener(backB);
+        for (int i = 0; i < Buttons.Length;++i){
+            TryAddListener(Buttons[i]);
+        }
+    
     }
 
     void TryAddListener(Button button)
