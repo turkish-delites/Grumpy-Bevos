@@ -203,6 +203,7 @@ MonoBehaviour:
   _mainBlockObject: {fileID: 1855610796300596}
   _forceToKill: 1000
   _secondsFromFullBurnToBreak: 1
+  _generateFirePoints: 0
 --- !u!114 &114195374706297158
 MonoBehaviour:
   m_ObjectHideFlags: 1

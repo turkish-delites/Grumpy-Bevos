@@ -10,7 +10,8 @@ public class BevoController : MonoBehaviour, IFireGroupController {
     private float _secondsToBurnToDeath = 2f;
     [SerializeField]
     private float _forceToKill = 5f;
- 
+    [SerializeField]
+    private GameObject _mainObject;
   
 
     // Use this for initialization
@@ -78,7 +79,7 @@ public class BevoController : MonoBehaviour, IFireGroupController {
     void die()
     {   
         //here would be a good place for some kind of death animation
-        Destroy(gameObject);
+        Destroy(_mainObject);
     }
 }
 
