@@ -15,6 +15,7 @@ public class LevelSelect : MonoBehaviour {
 
         for(int i = 1; i < levels.Count; i++)
         {
+            Debug.Log(i);
             var child = Instantiate(_sceneButtonPrefab, transform, false);
             child.GetComponentInChildren<Text>().text = levels[i];
             int temp = i;
