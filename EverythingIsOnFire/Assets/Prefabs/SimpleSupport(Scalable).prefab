@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 4189797412960094}
   - component: {fileID: 212620504049935366}
   - component: {fileID: 50052339339725940}
+  - component: {fileID: 114980854733487360}
   m_Layer: 0
   m_Name: SimpleSupport(Scalable)
   m_TagString: Untagged
@@ -244,6 +245,17 @@ MonoBehaviour:
   _forceToKill: 10
   _secondsFromFullBurnToBreak: 1
   _generateFirePoints: 1
+--- !u!114 &114980854733487360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1785209243905452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee1eab78206be24a91b0804225e1554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212620504049935366
 SpriteRenderer:
   m_ObjectHideFlags: 1
