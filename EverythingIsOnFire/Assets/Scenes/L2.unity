@@ -288,6 +288,11 @@ Prefab:
       propertyPath: m_Name
       value: Bevo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114518881754088790, guid: 352988779d827674aa8ab3158e09d8e5,
+        type: 2}
+      propertyPath: _forceToKill
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 352988779d827674aa8ab3158e09d8e5, type: 2}
   m_IsPrefabAsset: 0
@@ -786,6 +791,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114518881754088790, guid: 352988779d827674aa8ab3158e09d8e5,
+        type: 2}
+      propertyPath: _forceToKill
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 352988779d827674aa8ab3158e09d8e5, type: 2}
   m_IsPrefabAsset: 0
@@ -1081,6 +1091,11 @@ Prefab:
     - target: {fileID: 1618363019412812, guid: 352988779d827674aa8ab3158e09d8e5, type: 2}
       propertyPath: m_Name
       value: Bevo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518881754088790, guid: 352988779d827674aa8ab3158e09d8e5,
+        type: 2}
+      propertyPath: _forceToKill
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 352988779d827674aa8ab3158e09d8e5, type: 2}
