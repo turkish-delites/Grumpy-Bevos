@@ -1,6 +1,5 @@
 # Grumpy-Bevos
 This game was made as a part of Texas A&M University's VIST-487/CSCE-443: Game Development course.
-(The commits can't be seen because this repository was originally a part of the Texas A&M GitHub Enterprise)
 
 ## How to Play
 * Download repository from GitHub
